@@ -5,6 +5,7 @@
 This project has been realized with [Symfony](https://symfony.com/doc/current/index.html).
 
 ## 🎉 Getting started 
+### Welcome to Hemp Store ! 🌿⚗️
 ![](./public/assets/image/south.png)
 
 ### The prerequisites
@@ -45,11 +46,11 @@ ___
 
 ## TODO 🧹
 
-* [x]  Entities
-* [x]  Controllers
-* [x]  Database
-* [x]  Cart 
-  * [x]  Add product
-  * [x]  remove product
-* [ ]  fix CSS 
+* [x]  Generate a basic authentication system
+* [x]  Add entities and create tht database
+* [x]  Configire controllers 
+* [x]  Manage cart system
+  * [x]  Function Add product
+  * [x]  Function remove product
+* [ ]  Fix the CSS 
  ...
