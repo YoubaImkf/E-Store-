@@ -1,0 +1,25 @@
+{# cart/thank_you.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Thank You{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Thank You for Your Purchase!</h1>
+        <p>We appreciate your business.</p>
+
+        <h2>Order Details:</h2>
+        <ul>
+            {% for item in cart %}
+                <li>
+                    Product: {{ item.product.title }}
+                    Quantity: {{ item.quantity }}
+                    Price: {{ item.product.price }}€
+                </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Total: {{ total }}€</h3>
+    </div>
+{% endblock %}

@@ -20,7 +20,24 @@
                 <li><a href="{{path('app_register')}}">Registration</a> </li>
             </ul>
         </nav>
+
+        <style>
+            body {
+                list-style: none;
+            }
+            .navbar {
+                width: 100%;
+            }
+            nav ul{
+                display: flex;
+            }
+            nav ul li {
+                margin-right:2rem;
+            }
+        </style>
+        
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
+
 </html>

@@ -59,7 +59,34 @@ class CartService
         return $cartData;
     }
 
+    public function updateQuantity(int $id, int $quantity): void
+    {
+        $cart = $this->getSession()->get('cart', []);
+    
+        if (!empty($cart[$id])) {
+            $cart[$id] = $quantity;
+        }
+    
+        $this->getSession()->set('cart', $cart);
+    }
+    
+    public function clearCart(): void {
+        $this->getSession()->remove('cart');
+    }
 
+    public function calculateTotal(array $cart): float {
+        $total = 0;
+
+        foreach ($cart as $item) {
+            $product = $item['product'];
+            $quantity = $item['quantity'];
+            $total += $product->getPrice() * $quantity;
+        }
+
+        return $total;
+    }
+
+    # private methods
     private function getSession() {
         return $this->requestStack->getSession();
     }
